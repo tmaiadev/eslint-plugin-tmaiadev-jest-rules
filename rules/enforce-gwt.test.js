@@ -25,7 +25,7 @@ ruleTester.run("enforce-gwt", gwtRule, {
       errors: [
         {
           message:
-            "Description blocks should start with 'given', 'when' or 'and'.",
+            "Description blocks should start with 'Given', 'When' or 'And'.",
         },
       ],
     },
@@ -33,7 +33,7 @@ ruleTester.run("enforce-gwt", gwtRule, {
       code: 'test("shoud foo", () => {})',
       errors: [
         {
-          message: "Test blocks should start with 'then'.",
+          message: "Test blocks should start with 'Then'.",
         },
       ],
     },

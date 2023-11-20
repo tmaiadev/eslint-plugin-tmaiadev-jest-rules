@@ -17,7 +17,7 @@ module.exports = {
           context.report({
             node,
             message:
-              "Description blocks should start with 'given', 'when' or 'and'.",
+              "Description blocks should start with 'Given', 'When' or 'And'.",
           });
         }
       },
@@ -25,7 +25,7 @@ module.exports = {
         if (!/^then /i.test(node.value)) {
           context.report({
             node,
-            message: "Test blocks should start with 'then'.",
+            message: "Test blocks should start with 'Then'.",
           });
         }
       },
