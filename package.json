@@ -1,10 +1,10 @@
 {
   "name": "eslint-plugin-tmaiadev-jest-rules",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This ESLint Plugin will enforce your Jest tests to follow the 'Given When Then' and the 'it should' patterns.",
   "main": "eslint-plugin-tmaiadev-jest-rules.js",
   "scripts": {
-    "test": "node rules/enforce-gwt.test.js && node rules/enforce-it-should.js"
+    "test": "node rules/enforce-gwt.test.js && node rules/enforce-gwt-capitalized.test.js && node rules/enforce-it-should.test.js"
   },
   "keywords": [
     "Jest",

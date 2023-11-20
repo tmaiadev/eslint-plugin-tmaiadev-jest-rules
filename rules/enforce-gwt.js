@@ -11,21 +11,21 @@ module.exports = {
       "CallExpression[callee.name='describe'] > Literal": function (node) {
         if (
           !node.value.startsWith("Given ") &&
-          !node.value.startsWith("When ") &&
-          !node.value.startsWith("And ")
+          !/^when /i.test(node.value) &&
+          !/^and /i.test(node.value)
         ) {
           context.report({
             node,
             message:
-              "Description blocks should start with 'Given', 'When' or 'And'.",
+              "Description blocks should start with 'given', 'when' or 'and'.",
           });
         }
       },
       "CallExpression[callee.name='test'] > Literal": function (node) {
-        if (!node.value.startsWith("Then ")) {
+        if (!/^then /i.test(node.value)) {
           context.report({
             node,
-            message: "Test blocks should start with 'Then'.",
+            message: "Test blocks should start with 'then'.",
           });
         }
       },

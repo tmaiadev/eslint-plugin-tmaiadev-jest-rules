@@ -25,3 +25,5 @@ ruleTester.run("enforce-it-should", itShouldRule, {
     },
   ],
 });
+
+console.log("enforce-it-should tests passed!");

@@ -13,10 +13,10 @@ ruleTester.run("enforce-gwt", gwtRule, {
       code: 'describe("Given `foo`", () => {})',
     },
     {
-      code: 'describe("When bar", () => {})',
+      code: 'describe("when bar", () => {})',
     },
     {
-      code: 'describe("And qux", () => {})',
+      code: 'describe("and qux", () => {})',
     },
   ],
   invalid: [
@@ -25,11 +25,19 @@ ruleTester.run("enforce-gwt", gwtRule, {
       errors: [
         {
           message:
-            "Description blocks should start with 'Given', 'When' or 'And'.",
+            "Description blocks should start with 'given', 'when' or 'and'.",
+        },
+      ],
+    },
+    {
+      code: 'test("shoud foo", () => {})',
+      errors: [
+        {
+          message: "Test blocks should start with 'then'.",
         },
       ],
     },
   ],
 });
 
-console.log("All tests passed!");
+console.log("enforce-gwt tests passed!");
